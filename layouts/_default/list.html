@@ -1,0 +1,24 @@
+{{ partial "header/site-header.html" .}}
+{{ partial "header/site-nav.html" .}}
+<section>
+    <div class="container" style="padding:10px;">
+        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "posts") }}
+        {{ range $paginator.Pages }}
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p><small>{{if .Params.author}}By: <b> {{.Params.Author}} </b>{{end}}</small></p>
+        {{ .Summary }}
+        {{ if .Truncated }}
+        <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+        <div>
+            <a href="{{ .RelPermalink }}">Read More…</a>
+        </div>
+        {{ end }}
+        {{ end }}
+        <div class="d-flex justify-content-center p-2">
+        {{ template "_internal/pagination.html" . }}
+        </div>
+    </div>
+</section>
+
+{{partial "footer/scripts.html" .}}
+{{partial "footer/site-footer.html" .}}

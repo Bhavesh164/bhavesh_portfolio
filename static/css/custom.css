@@ -1,0 +1,25 @@
+body{
+    padding-top:0;
+    padding-bottom:0;
+}
+nav.navbar{
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    position: relative;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+.footer {
+    min-height:56px;
+    margin-bottom:-3rem;
+ }
+ 
+

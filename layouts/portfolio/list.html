@@ -1,0 +1,36 @@
+{{ partial "header/site-header.html" .}}
+{{ partial "header/site-nav.html" .}}
+<style>
+
+#masonry{
+    display: flex;
+    padding:5px;
+    margin: 0 auto; 
+    padding-bottom: 5px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;  
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    
+}
+.item {
+    margin-bottom:10px;
+    width:47%;
+    border: 2px solid #212529;
+    border-radius: 5px;
+    object-fit: cover;
+    
+}
+</style>
+    <h2 style="padding:10px;text-align: center;">Portfolio</h2>
+    <div id='masonry'>
+        <img src="/images/banker.jpg" class="item" alt="img">
+        <img src="/images/comesum.jpg" class="item" alt="img">
+        <img src="/images/lechat_lotto.jpg" class="item" alt="img">
+        <img src="/images/ijmb.jpg" class="item" alt="img">
+      </div>
+
+
+{{partial "footer/scripts.html" .}}
+{{partial "footer/site-footer.html" .}}
