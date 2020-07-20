@@ -1,14 +1,14 @@
 {{ partial "header/site-header.html" .}}
 {{ partial "header/site-nav.html" .}}
 <style>
-html,body{
-    overflow-x: hidden;
-}
 nav.navbar{
     display: flex;
     align-items: center;
     padding: .5rem 1rem;
     position: fixed;
+}
+.row{
+    margin-right:0;
 }
 @media(min-width:768px){
     .aboutsideDiv{
@@ -107,7 +107,6 @@ nav.navbar{
 
 {{partial "footer/scripts.html" .}}
 {{partial "footer/site-footer.html" .}}
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script}) -->
 <script>
 
 $('a[href*=\\#]').click(function() { 
